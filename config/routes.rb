@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
+  root 'home#home'
+  get '/top', to: 'home#top'
+  get '/index', to: 'home#index'
 
   namespace :api, format: 'json' do
     resources :tasks, only: [:index, :create, :destroy, :update]
