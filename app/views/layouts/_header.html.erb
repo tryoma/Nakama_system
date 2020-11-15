@@ -3,8 +3,25 @@
     <%= link_to "Nakama System App", root_path , id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
+      <% if user_signed_in? %>
+        <% if current_user.admin? %> 
+          <li><%= link_to "Groups", '#' %></li>
+          <li><%= link_to "Users", '#' %></li>
+          <li><%= link_to "Menu", '#' %></li>
+          <li><%= link_to "Setting", '#' %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Top", root_path %></li>
+          <li><%= link_to "Menu", '#' %></li>
+          <li><%= link_to "My Page", '#' %></li>
+          <li><%= link_to "Setting", '#' %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <% end %>
+      <% else %>
         <li><%= link_to "Top", root_path %></li>
-        <li><%= link_to "Log in", '#' %></li>
+        <li><%= link_to "Log in", new_user_session_path %></li>
+        <li><%= link_to "Sign in", new_user_registration_path %></li>
+      <% end %>
       </ul>
     </nav>
   </div>
