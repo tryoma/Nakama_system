@@ -1,3 +1,3 @@
 <template>
-  <h1>ToDoリスト</h1>
+  <h1>応援可能なグループ</h1>
 </template>
