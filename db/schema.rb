@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_15_005049) do
+ActiveRecord::Schema.define(version: 2020_11_16_112425) do
+
+  create_table "groups", force: :cascade do |t|
+    t.string "group_name"
+    t.integer "owner_id"
+    t.string "goal"
+    t.string "todo"
+    t.integer "frequency"
+    t.date "start_goal_day"
+    t.date "end_goal_day"
+    t.string "genre"
+    t.integer "limit_members"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "tasks", force: :cascade do |t|
     t.string "name"

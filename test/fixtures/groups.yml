@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  group_name: MyString
+  owner_id: 1
+  goal: MyString
+  todo: MyString
+  frequency: 1
+  start_goal_day: 2020-11-16
+  end_goal_day: 2020-11-16
+  genre: MyString
+  limit_members: 1
+
+two:
+  group_name: MyString
+  owner_id: 1
+  goal: MyString
+  todo: MyString
+  frequency: 1
+  start_goal_day: 2020-11-16
+  end_goal_day: 2020-11-16
+  genre: MyString
+  limit_members: 1
