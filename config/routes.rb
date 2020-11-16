@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'home#home'
   get '/top', to: 'home#top'
   
-  resources :users, only: [:index]
+  resources :users, only: [:index, :show]
   namespace :api, format: 'json' do
     resources :users, only: [:index, :create, :destroy, :update]
   end
