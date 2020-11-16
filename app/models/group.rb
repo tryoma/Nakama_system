@@ -9,7 +9,7 @@ class Group < ApplicationRecord
   validates :genre, presence: true
   validates :limit_members, presence: true, :numericality => { :greater_than => 2 , :message => '２人以上を設定してください'}    # 数字が2より大きいか
   
-  validates :start_goal_day_invalid_later_than_end_goal_day
+  # validates :start_goal_day_invalid_later_than_end_goal_day
 
   def start_goal_day_invalid_later_than_end_goal_day
     errors.add(:start_goal_day, "は終了より遅いので無効です") if start_goal_day > end_goal_day
