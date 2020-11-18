@@ -1,5 +1,10 @@
 <% provide(:title, @user.username ) %>
 <h1><%= @user.username%>のページ</h1>
   <h2>▷主催しているグループ</h2>
+  <div id="app">
+    <navbar></navbar>
+    <contents></contents>
+  </div>
   <h2>▷所属しているグループ</h2>
 
+<%= javascript_pack_tag 'user_show' %>

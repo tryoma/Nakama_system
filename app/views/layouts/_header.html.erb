@@ -13,9 +13,10 @@
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Groups", groups_path %></li>
           <li><%= link_to "Menu", '#' %></li>
           <li><%= link_to "Top", top_path %></li>
-          <li><%= link_to "My Page", '#' %></li>
+          <li><%= link_to "My Page", user_path(current_user) %></li>
           <li><%= link_to "Setting", edit_user_registration_path %></li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% end %>

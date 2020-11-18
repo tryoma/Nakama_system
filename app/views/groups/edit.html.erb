@@ -1,18 +1,9 @@
 <% provide(:title, 'Group Editing') %>
+<% provide(:button_text, '更新') %>
 <h1>グループ編集</h1>
 
 <div class="col-md-10 col-md-offset-1">
   <table class="table table-condensed table-hover" id="table-users">
-    <thead>
-      <tr>
-        <th><%= Group.human_attribute_name :name %></th>
-      </tr>
-    </thead>
-
-    <% @groups.each do |group| %>
-      <tr>
-        <td><%= link_to group.group_name, group_path(group) %></td>
-      </tr>
-    <% end %>
+    <%= render 'form' %>
   </table>
 </div>
