@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   end
 
   namespace :api, format: 'json' do
+    resources :groups, only: [:index, :create, :destroy, :update]
+  end
+
+  namespace :api, format: 'json' do
     resources :tasks, only: [:index, :create, :destroy, :update]
   end
 end
