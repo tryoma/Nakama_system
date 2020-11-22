@@ -3,7 +3,7 @@ module Api
     skip_before_action :verify_authenticity_token
 
     def index
-      @groups = Group.order('created_at DESC')
+      @groups = Group.order('created_at ASC')
     end
 
     def create

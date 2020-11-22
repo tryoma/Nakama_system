@@ -4,6 +4,7 @@
     <div class="row">
       <ul>
         <li v-for="(group, index) in groups" :key="index">
+          <p>{{ group.id }}</p>
           <p>{{ group.group_name }}</p>
           <p>{{ group.owner_id }}</p>
           <p>{{ group.goal }}</p>
